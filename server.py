@@ -1,4 +1,3 @@
-from io import StringIO
 from flask import Flask, render_template
 from bokeh.plotting import figure
 from bokeh.embed import components
@@ -9,6 +8,7 @@ app = Flask(__name__)
 
 @app.route('/hello')
 def index():
+    #return render_template('hello.html')
     return render_template('hello.html', message='hello')
 
 
@@ -37,4 +37,4 @@ def plot():
 
 
 if __name__ == '__main__':
-    app.run(port=8000, debug=True)
+    app.run(port=4000, debug=True)
